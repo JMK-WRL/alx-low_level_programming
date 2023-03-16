@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * Description: main - Prints out a string
- * return/end: returns 0 if success
+ * Description: main - prints a string
+ * Return: 0 if success
  */
 
 int main(void)
