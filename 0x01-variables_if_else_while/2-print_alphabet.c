@@ -8,6 +8,14 @@
 
 int main(void)
 {
-	putchar(65);
+	char c;
+
+	c = 'a';
+	while
+		(c <= 'z') {
+			putchar(c);
+			c++;
+		}
+	putchar('\n');
 	return (0);
 }
