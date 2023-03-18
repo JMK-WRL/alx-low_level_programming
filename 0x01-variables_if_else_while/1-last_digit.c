@@ -4,29 +4,25 @@
 /**
  * main - Entry point
  * Description: 'get the last digit of a number'
- * Return: always 0
+ * Return: always 0 (success)
  */
 
 
 int main(void)
 {
-		int n;
-		int ld;
+	int n;
 
-			srand(time(0));
-				n = rand() - RAND_MAX / 2;
-					ld = n % 10;
-					if (ld > 5)
-					{
-						printf("Last digit of %d is %d and is greater than 5\n", n, ld);
-						}
-					else if (ld == 0)
-					{
-						printf("Last digit of %d is %d and is 0\n", n, ld);
-					}
-					else
-					{
-						printf("Last digit of %d is %d and less than 6 or not 0\n", n, ld);
-					}
-					return (0);
+	int m;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your coed goes there */
+	m = n % 10;
+	if (m > 5)
+		printf("Last digit of %d is %d and is greater than 5\n", n, m);
+	if (m == 0)
+		printf("Last digit of %d is %d and is 0\n", n, m);
+	if (m < 6 && m != 0)
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, m);
+	return (0);
 }
