@@ -13,9 +13,6 @@ char *leet(char *a)
 	char s1[] = "aAeEoOtTlL";
 	char s2[] = "443300771l";
 
-	x = 0;
-	y = 0;
-
 	for (x = 0; a[x] != '\0'; x++)
 	{
 		for (y = 0; y < 10; y++)
