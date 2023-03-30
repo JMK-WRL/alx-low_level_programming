@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * rot13 - encodes a string using rot13
- * @s: pointer to the string
+ * rot13 - encode rot13
+ * @s: pointer to string
  * Return: *s
  */
 
@@ -12,7 +12,7 @@ char *rot13(char *s)
 	int i;
 	int j;
 	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char datarot[] = "NOPQRTSUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqestuvwxyzabcdefghijklm";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
