@@ -7,7 +7,7 @@ int main(void)
 	int *p;
 
 	a[2] = 1024;
-	p = &n;
+	o = &n;
 	/*
 	 * write your line of code here...
 	 * Remember:
