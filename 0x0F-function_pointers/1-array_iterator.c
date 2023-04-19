@@ -11,7 +11,7 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	unsigned int x;
+	size_t x;
 
 	x = 0;
 
