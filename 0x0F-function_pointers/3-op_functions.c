@@ -30,7 +30,7 @@ int op_sub(int a, int b)
  * op_mul - returns products of a and b
  * @a: value
  * @b: value
- * Returns: prod of a and b
+ * Return: prod of a and b
  */
 
 int op_mul(int a, int b)
@@ -41,7 +41,7 @@ int op_mul(int a, int b)
 /**
  * op_div - division
  * @a: value
- * @b: value 
+ * @b: value
  * Return: div of a and b
  */
 
