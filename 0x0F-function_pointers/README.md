@@ -4,7 +4,7 @@
 
 # Directory Description
 
-* This directory contains files that depict different functions related the concept of **Function Pointer**.
+* This directory contains files that depict different functions that relate to the concept of **Function Pointers**.
 
 * Each task shows different uses of Function pointers.
 
