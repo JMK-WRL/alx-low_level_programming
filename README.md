@@ -10,3 +10,7 @@
 6. Static Libraries
 7. argc and argv
 8. malloc, free
+9. Preprocessors
+10. Structures, typedef
+11. Function Pointers
+12. Variadic functions
