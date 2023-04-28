@@ -6,6 +6,8 @@
 
 * This directory contains files that depict different functions that relate to the concept of **Function Pointers**.
 
+* **what is a function pointer? - This is a variable that in C programming that holds the address of a function in memory, in simple terms: it is a pointer that points to a function instead of a variable.**
+
 * Each task shows different uses of Function pointers.
 
 # Directory Content
