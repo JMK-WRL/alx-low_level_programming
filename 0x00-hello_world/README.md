@@ -6,7 +6,7 @@
 
 * The directory involves all the introductory concepts used in C progrmming mainly the Compling process.
 
-* The C compiling process involves
+* The C compiling process involves:
 	1. Preprocessing
 	2. Compilation
 	3. Assembly
