@@ -8,7 +8,7 @@
 
 * ***what is a function pointer? - This is a variable in C programming that holds the address of a function in memory, in simple terms: it is a pointer that points to a function instead of a variable.***
 
-* Each task shows different uses of Function pointers.
+* Each task is set to show different ways of using function poninters.
 
 # Directory Content
 
