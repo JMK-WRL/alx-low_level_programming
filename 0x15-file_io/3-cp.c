@@ -4,11 +4,11 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * create_buffer - Allocates 1024 bytes for a buffer.
- * @file: The name of the file buffer is storing chars for.
- *
- * Return: A pointer to the newly-allocated buffer.
+ * create_buffer - allocates 1024 bytes to a buffer
+ * @file: the name of the file buffer
+ * Return: pointer to the new buffer
  */
+
 char *create_buffer(char *file)
 {
 	char *buffer;
@@ -26,52 +26,53 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file - Closes the file descriptors.
- * @fd: The file descriptor to be closed.
+ * close_file - closes the fd
+ * @fd: the file descriptor to be closed
  */
+
 void close_file(int fd)
 {
-	int x;
+	int close_status;
 
-	x = close(fd);
+	close_status = close(fd);
 
-	if (x == -1)
+	if (close_status == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO,
+			"Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
 
 /**
- * main - Copies the contents of a file to another file.
- * @argc: The number of arguments that is supplied to the program.
- * @argv: An array of pointers to the arguments.
- *
- * Return: 0 on success.
- *
- * Description: If the argument count is incorrect - exit code 97.
- * If file_from does not exist or cannot be read - exit code 98.
- * If file_to cannot be created or written to - exit code 99.
- * If file_to or file_from cannot be closed - exit code 100.
+ * main - copies the contents of a file to another file
+ * @argc: number of arguments
+ * @argv: array of pointers to the arguments
+ * Return: 0 (success)
  */
+
 int main(int argc, char *argv[])
 {
-	int from, o, v, x;
+	int fd_from;
+	int fd_to;
+	int read_status;
+	int write_status;
 	char *buffer;
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO,
+			"Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
 	buffer = create_buffer(argv[2]);
-	from = open(argv[1], O_RDONLY);
-	v = read(from, buffer, 1024);
-	o = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd_from = open(argv[1], O_RDONLY);
+	read_status = read(fd_from, buffer, 1024);
+	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-		if (from == -1 || v == -1)
+		if (fd_from == -1 || read_status == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
@@ -79,8 +80,8 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		x = write(o, buffer, v);
-		if (o == -1 || x == -1)
+		write_status = write(fd_to, buffer, read_status);
+		if (fd_to == -1 || write_status == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
@@ -88,14 +89,14 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
-		v = read(from, buffer, 1024);
-		o = open(argv[2], O_WRONLY | O_APPEND);
+		read_status = read(fd_from, buffer, 1024);
+		fd_to = open(argv[2], O_WRONLY | O_APPEND);
 
-	} while (v > 0);
+	} while (read_status > 0);
 
 	free(buffer);
-	close_file(from);
-	close_file(o);
+	close_file(fd_from);
+	close_file(fd_to);
 
 	return (0);
 }
