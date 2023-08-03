@@ -15,4 +15,4 @@
 11. Function Pointers
 12. Variadic functions
 13. Singly linked lists
-
+14. Bit Manipulation
