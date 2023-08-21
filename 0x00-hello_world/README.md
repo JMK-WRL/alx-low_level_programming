@@ -1,58 +1,83 @@
-# Directory Name
+# ALX Low-Level Programming - Hello World
 
-0x00-hello_world
+Welcome to the ALX Low-Level Programming Hello World project! This repository contains a series of tasks designed to help you get familiar with C programming and various aspects of the compilation process. Each task focuses on different concepts and challenges related to programming in C.
 
-# Directory Description 
+## Table of Contents
 
-* The directory involves all the introductory concepts used in C progrmming mainly the Compling process.
+- [Task 0: Preprocessor](#task-0-preprocessor)
+- [Task 1: Compiler](#task-1-compiler)
+- [Task 2: Assembler](#task-2-assembler)
+- [Task 3: Name](#task-3-name)
+- [Task 4: Hello, puts](#task-4-hello-puts)
+- [Task 5: Hello, printf](#task-5-hello-printf)
+- [Task 6: Size is not grandeur](#task-6-size-is-not-grandeur)
+- [Task 7: Intel](#task-7-intel)
+- [Task 8: UNIX is basically a simple operating system](#task-8-unix-is-basically-a-simple-operating-system)
 
-* The C compiling process involves:
-	1. Preprocessing
-	2. Compilation
-	3. Assembly
-	4. Linking
+## Task 0: Preprocessor
 
-# Directory Content
+**Objective:** Write a script that runs a C file through the preprocessor and saves the result into another file.
 
-* **Task 0 - Preprocessor**
+**Explanation:**
+This task involves writing a script that preprocesses a C file using the preprocessor, and then saves the result into an output file. The C file name is provided in the variable `$CFILE`, and the output is saved in the file named `c`.
 
-	* This task requires us to write a script that runs a C file through the *preprocessor* and save the result into another file.
-	* The variable should be saved in the variable $CFILE
-	* The output should be saved in the file c
+## Task 1: Compiler
 
-* **Task 1 - Compiler**
+**Objective:** Write a script that compiles a C file but does not link.
 
-	* The tasks requires us to write a scipt that compiles a C file but does not link.
-	* The output file should be named with the extension .o instead of .c (indicates an object file).
+**Explanation:**
+In this task, you'll create a script that compiles a C file but does not perform the linking step. The C file name is provided in the variable `$CFILE`, and the output file should have the same name as the C file, with the extension `.o`.
 
-* **Task 2 - Assembler**
+## Task 2: Assembler
 
-	* Script that generates the assemnly code of a C code and save it in an output file.
-	* The output file is named the same as the C file, but with the extension .s instead of .c
+**Objective:** Write a script that generates the assembly code of a C code and saves it in an output file.
 
-* **Task 3 - Name**
+**Explanation:**
+Here, you'll write a script that generates the assembly code of a given C code and saves it in an output file. The C file name is provided in the variable `$CFILE`, and the output file should have the same name as the C file, with the extension `.s`.
 
-	* Script that compiles C file and creates an executable file named **cisfun**
+## Task 3: Name
 
-* **Task 4 - Hello, puts**
+**Objective:** Write a script that compiles a C file and creates an executable named `cisfun`.
 
-	* Program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
-	* It uses the function *puts*
+**Explanation:**
+This task involves writing a script that compiles a C file and generates an executable named `cisfun`. The C file name is provided in the variable `$CFILE`.
 
-* **Task 5 - Hello, printf**
+## Task 4: Hello, puts
 
-	* Program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line.
-	* It uses the function *printf*
+**Objective:** Write a C program that prints a specific message using the function `puts`.
 
-* **Task 6 - Size is not grandeur, and territory does not make a nation**
+**Explanation:**
+In this task, you'll create a C program that prints a specific message using the `puts` function. The program should end with the value 0.
 
-	* Program that prints the size of various data types on the computer it is compiled and run on.
+## Task 5: Hello, printf
 
-* **Task 7 - Intel**
+**Objective:** Write a C program that prints a specific message using the function `printf`.
 
-	* Script that generates the assembly code of a C code and save it in an output file.
+**Explanation:**
+Here, you'll write a C program that prints a specific message using the `printf` function. The program should return 0, and it should compile without warnings using the `-Wall` gcc option.
 
-* **Task 8 - UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity**
+## Task 6: Size is not grandeur
 
-	* Program that prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
-	* The program returns **1**
+**Objective:** Write a C program that prints the size of various types.
+
+**Explanation:**
+This task involves writing a C program that prints the size of various types on the computer it's compiled and run on. The program should compile and run for both 32-bit and 64-bit systems and produce the exact same output as in the example.
+
+## Task 7: Intel
+
+**Objective:** Write a script that generates the assembly code (Intel syntax) of a C code and saves it in an output file.
+
+**Explanation:**
+In this task, you'll create a script that generates the assembly code (using Intel syntax) of a given C code and saves it in an output file. The C file name is provided in the variable `$CFILE`, and the output file should have the same name as the C file, with the extension `.s`.
+
+## Task 8: UNIX is basically a simple operating system
+
+**Objective:** Write a C program that prints a specific quote to the standard error.
+
+**Explanation:**
+For this task, you'll write a C program that prints a specific quote to the standard error. You are not allowed to use the functions listed in the `man (3) printf` or `man (3) puts`. The program should return 1, and it should compile without any warnings using the `-Wall` gcc option.
+
+---
+
+Feel free to explore each task, understand the concepts, and modify the code as needed. Happy learning and coding!
+
