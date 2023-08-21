@@ -1,5 +1,12 @@
 # ALX Low-Level Programming - 0x01. C - Variables, if, else, while
 
+Variable: Used to store and manage data in memory, allowing the program to manipulate and reference values during execution.
+
+if: Conditional statement that directs program flow based on a given condition; executes a block of code if the condition is true.
+
+else: Part of an if statement, provides an alternative block of code to execute when the condition is false.
+
+while: Looping construct that repeatedly executes a block of code as long as the specified condition remains true, allowing for iterative operations.
 
 ## Table of Contents
 
